@@ -1,14 +1,14 @@
 public class Main {
 
     public static void main(String[] args) {
-        int[] array = {3, 5, 2, 8, 9, 1};
+        int[] array = {3, 2, 5, 1, 9, 4};
 
 	    Sorting sorting = new Sorting();
 
         System.out.println("Unordered: ");
         printArray(array);
 
-	    array = sorting.bubbleSort(array);
+	    array = sorting.insertionSort(array);
 
         System.out.println("Ordered: ");
         printArray(array);
