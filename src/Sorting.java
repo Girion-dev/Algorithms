@@ -53,7 +53,7 @@ public class Sorting {
      * Repeatedly compares adjacent elements
      * and swaps them if they are in wrong order.
      * The max value therefore 'sinks' to the end of
-     * the array.
+     * the array (or the min at the beginning).
      *
      * Time complexity: O(n^2)
      * Space complexity: Sorted in place - O(1)
@@ -99,7 +99,7 @@ public class Sorting {
      * Takes the left part of the array as an
      * sorted part and the rest as an unsorted
      * part. Repeatedly keeps inserting the
-     * next element in the sorted part.
+     * next element into the sorted part.
      * Best of the simple sorting algorithms.
      *
      * Time complexity: O(n^2)
@@ -130,8 +130,7 @@ public class Sorting {
         for (int i = 1; i < array.length; i++) { //Consider the first element already sorted
             memory = array[i]; //Save the element
             j = i - 1;
-            //Loop until we find less or equal number or reach
-            //the beginning of the array
+            //Loop until we find a less or equal number or reach the beginning of the array
             while ((j >= 0) && (array[j] > memory)) {
                 array[j + 1] = array[j];
                 j--;
@@ -139,6 +138,11 @@ public class Sorting {
             //Put the element in the right place
             array[j + 1] = memory;
         }
+        return array;
+    }
+
+    public int[] heapSort(int[] array) {
+        
         return array;
     }
 }
