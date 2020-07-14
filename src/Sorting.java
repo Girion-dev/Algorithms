@@ -34,7 +34,7 @@ public class Sorting {
         //Loop over all values
         for (int i = 0; i < array.length; i++) {
             //Find min value
-            min = i;
+            min = i; //Set the min to the current first element
             for (int j = i; j < array.length; j++) {
                 if (array[j] < array[min]) {
                     min = j;
