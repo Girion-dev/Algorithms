@@ -143,6 +143,13 @@ public class Sorting {
 
     public int[] heapSort(int[] array) {
         array = heapSortUp(array);
+        int temp;
+        for (int i = 0; i < array.length; i++) {
+            temp = array[array.length - 1];
+            array[array.length - 1] = array[0];
+            array[0] = temp;
+            array = heapSortDown(array, array.length - i);
+        }
         return array;
     }
 
@@ -169,8 +176,33 @@ public class Sorting {
         return array;
     }
 
-    private int[] heapSortDown(int[] array) {
-
+    private int[] heapSortDown(int[] array, int lastIndex) {
+        int leftChild;
+        int rightChild;
+        int temp;
+        int i = 0;
+        leftChild = 2 * i + 1;
+        rightChild = (2 * i) + 2;
+        while ((array[i] < array[leftChild] || array[i] < array[rightChild]) && i <= lastIndex) {
+            if (array[i] < array[leftChild] && array[i] < array[rightChild]) {
+                temp = array[leftChild];
+                array[leftChild] = array[i];
+                array[i] = temp;
+                i = leftChild;
+            } else if (array[leftChild] < array[i]) {
+                temp = array[leftChild];
+                array[leftChild] = array[i];
+                array[i] = temp;
+                i = leftChild;
+            } else {
+                temp = array[rightChild];
+                array[rightChild] = array[i];
+                array[i] = temp;
+                i = rightChild;
+            }
+            leftChild = 2 * leftChild + 1;
+            rightChild = (2 * rightChild) + 2;
+        }
         return array;
     }
 }
