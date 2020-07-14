@@ -142,7 +142,31 @@ public class Sorting {
     }
 
     public int[] heapSort(int[] array) {
-        
+        array = heapSortUp(array);
+        return array;
+    }
+
+    private int[] heapSortUp(int[] array) {
+        int j;
+        int temp;
+        int parent;
+        for (int i = 1; i < array.length; i++) { //We skip the root
+            j = i;
+            parent = (array[i] - 1) / 2;
+            while (((parent < array[i])) && j != 0) {
+                if (((array[i] - 1) / 2) < array[i]) {
+                    temp = (array[i] - 1) / 2;
+                    parent = array[i];
+                    array[i] = temp;
+                    j--;
+                }
+            }
+        }
+        return array;
+    }
+
+    private int[] heapSortDown(int[] array) {
+
         return array;
     }
 }

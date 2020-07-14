@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Unordered: ");
         printArray(array);
 
-	    array = sorting.insertionSort(array);
+	    array = sorting.heapSort(array);
 
         System.out.println("Ordered: ");
         printArray(array);
