@@ -223,14 +223,14 @@ public class Sorting {
      * @return sorted array
      */
     public int[] mergeSort(int[] array) {
-        int pivot = array.length / 2; //The centre of the array for division
+        int center = array.length / 2; //The centre of the array for division
         //Base case
-        if (pivot == 0) {
+        if (center == 0) {
             return array;
         }
         //Creating the sub-arrays
-        int[] array1 = Arrays.copyOfRange(array, 0, pivot);
-        int[] array2 = Arrays.copyOfRange(array, pivot, array.length);
+        int[] array1 = Arrays.copyOfRange(array, 0, center);
+        int[] array2 = Arrays.copyOfRange(array, center, array.length);
         return merge(mergeSort(array1), mergeSort(array2));
     }
 
