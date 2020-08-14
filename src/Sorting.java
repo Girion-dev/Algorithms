@@ -6,7 +6,7 @@ public class Sorting {
     /**
      * Selection Sort
      * Repeatedly searches the lowest element
-     * and moves it to the beginning, right
+     * and moves it at the beginning, right
      * after the last sorted element, swapping
      * its position with the element at this
      * position.
