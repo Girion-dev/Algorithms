@@ -83,7 +83,8 @@ public class Sorting {
         int temp; //Temp value for swapping elements
         //Loop until elements are being swapped
         while (swapped) {
-            swapped = false;
+            swapped = false; //Assume elements won't be swapped
+            //Loop for all the elements in the array
             for (int i = 0; i < (array.length - 1); i++) {
                 //If right element is lower, swap with left
                 if (array[i] > array[i + 1]) {
@@ -132,13 +133,13 @@ public class Sorting {
         int j; //Counter for moving the sorted part
         for (int i = 1; i < array.length; i++) { //Consider the first element already sorted
             memory = array[i]; //Save the element
-            j = i - 1;
+            j = i - 1; //The first element to be moved
             //Loop until we find a less or equal number or reach the beginning of the array
             while ((j >= 0) && (array[j] > memory)) {
                 array[j + 1] = array[j];
                 j--;
             }
-            //Put the element in the right place
+            //Put the element from memory in the right place
             array[j + 1] = memory;
         }
         return array;
