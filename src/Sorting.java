@@ -218,7 +218,7 @@ public class Sorting {
      *
      * Cons:
      * - Requires extra space
-     * - Less efficent than smarter sorts
+     * - Less efficient than smarter sorts
      *
      * @param array to be sorted
      * @return sorted array
