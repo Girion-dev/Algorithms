@@ -1,14 +1,12 @@
+package com.example;
+
 public class Main {
 
     public static void main(String[] args) {
-        int[] array = {-1, 0, 10, 8, 2, 4, 5, -5};
-
-	    Sorting sorting = new Sorting();
+        int[] array = {3, 2, 5, 1, 9, 4};
 
         System.out.println("Unordered: ");
         printArray(array);
-
-	    array = sorting.quickSort(array);
 
         System.out.println("Ordered: ");
         printArray(array);
