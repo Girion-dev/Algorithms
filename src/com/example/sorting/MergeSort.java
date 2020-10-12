@@ -52,7 +52,7 @@ public class MergeSort {
         int[] mergedArrays = new int[array1.length + array2.length];
         int arr1Index = 0; //Current index of array1
         int arr2Index = 0; //Current index of array1
-        //Loop until we reach the end of one array
+        //Loop until we reach the end of either of the array
         while ((arr1Index < array1.length) && (arr2Index < array2.length)) {
             //Select the smaller element
             if (array1[arr1Index] < array2[arr2Index]) {
