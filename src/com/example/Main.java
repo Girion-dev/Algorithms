@@ -1,15 +1,13 @@
 package com.example;
 
+import com.example.searching.BinarySearch;
+
 public class Main {
 
     public static void main(String[] args) {
-        int[] array = {3, 2, 5, 1, 9, 4};
+        int[] array = {1, 5, 8, 14, 39, 58, 66, 1012, 2584};
 
-        System.out.println("Unordered: ");
-        printArray(array);
-
-        System.out.println("Ordered: ");
-        printArray(array);
+        System.out.println(BinarySearch.binarySearchIterative(array, 103));
     }
 
     public static void printArray(int[] array) {
